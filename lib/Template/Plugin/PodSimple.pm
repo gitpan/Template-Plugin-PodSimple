@@ -25,12 +25,13 @@ Template::Plugin::PodSimple - simple Pod::Simple plugin for TT
     USE PodSimple;
     %]
     
-    [% PodSimple.parse('Text', somepod) %]
+    [% PodSimple.parse('Text', somepod, 76) %]
     [% PodSimple.parse('xml', somepod) %]
     [% mySimpleTree = PodSimple.parse('tree', somepod ) %]
     [% PodSimple.parse('html', somepod, 'pod_link_prefix','man_link_prefix') %]
 
 Text translates to L<Pod::Simple::Text|Pod::Simple::Text>.
+When dealing with text, the 3rd argument is the value for C< $Text::Wrap::columns >.
 
 xMl translates to L<Pod::Simple::XMLOutStream|Pod::Simple::XMLOutStream>.
 
@@ -80,7 +81,7 @@ use Pod::Simple;
 use Carp 'croak';
 use base qw[ Template::Plugin ];
 use vars '$VERSION';
-$VERSION = sprintf "%d.%03d", q$Revision: 1.9 $ =~ /(\d+).(\d+)/g;
+$VERSION = sprintf "%d.%03d", q$Revision: 1.10 $ =~ /(\d+).(\d+)/g;
 
 
 my %map = (
@@ -164,7 +165,9 @@ sub parse {
     local *Pod::Simple::HTML::do_pod_link = \&_do_pod_link
         and
         local *Pod::Simple::HTML::do_man_link = \&_do_man_link
-            if $class =~ /html/i;
+            if $class eq 'html';
+
+    local $Text::Wrap::columns = $_[1] if $class eq 'text';
 
     if( $_[0] =~ /\n/ ){
         $new->parse_string_document( $_[0] );
