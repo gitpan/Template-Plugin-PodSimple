@@ -1,5 +1,9 @@
 Revision history for Perl module Template::Plugin::PodSimple
 
+1.008 Tue Jan 20 09:06:53 2004
+    - resolved lame tar perms issue (grrr) by using ptar
+    - changed =head1 LICENSE text
+
 1.007 Thu Jan 15 13:41:37 2004
     - now correctly overriding Pod::Simple::HTML::do_man_link, and 
       Pod::Simple::HTML::do_pod_link...

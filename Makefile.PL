@@ -14,3 +14,9 @@ WriteMakefile(
         'Template::Plugin' => 0,
     },
 );
+
+__END__
+perl Makefile.PL && nmake realclean && cls && perl Makefile.PL && nmake disttest
+nmake dist TAR=ptar
+chmod 7777 *.gz
+perl -le" `cpan-upload $_` for glob q,*.gz, "

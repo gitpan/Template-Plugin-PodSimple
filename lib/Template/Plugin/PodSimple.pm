@@ -69,8 +69,8 @@ or send mail to E<lt>Template-Plugin-PodSimple#rt.cpan.orgE<gt>.
 Copyright (c) 2003 by D.H. (PodMaster). All rights reserved.
 
 This module is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself. If you don't know what this means,
-visit http://perl.org/ or http://cpan.org/.
+under the same terms as Perl itself. The LICENSE file contains the full
+text of the license.
 
 =cut
 
@@ -80,7 +80,7 @@ use Pod::Simple;
 use Carp 'croak';
 use base qw[ Template::Plugin ];
 use vars '$VERSION';
-$VERSION = sprintf "%d.%03d", q$Revision: 1.7 $ =~ /(\d+).(\d+)/g;
+$VERSION = sprintf "%d.%03d", q$Revision: 1.8 $ =~ /(\d+).(\d+)/g;
 
 
 my %map = (
