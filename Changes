@@ -1,0 +1,10 @@
+Revision history for Perl module Template::Plugin::PodSimple
+
+0.02 Tue Dec 23 02:38:37 2003
+	- dropped in source, added version, massaged readme, Makefile.PL :)
+
+
+0.01 Tue Dec 23 02:38:37 2003
+	- original version; created by ExtUtils::ModuleMaker 0.32
+
+
