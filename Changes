@@ -1,5 +1,9 @@
 Revision history for Perl module Template::Plugin::PodSimple
 
+1.007 Thu Jan 15 13:41:37 2004
+    - now correctly overriding Pod::Simple::HTML::do_man_link, and 
+      Pod::Simple::HTML::do_pod_link...
+
 0.02 Tue Dec 23 02:38:37 2003
 	- dropped in source, added version, massaged readme, Makefile.PL :)
 
