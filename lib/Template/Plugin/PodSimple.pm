@@ -62,7 +62,7 @@ L<Pod::Simple|Pod::Simple>.
 
 To report bugs, go to
 E<lt>http://rt.cpan.org/NoAuth/Bugs.html?Dist=Template-Plugin-PodSimpleE<gt>
-or send mail to E<lt>Template-Plugin-PodSimple#rt.cpan.orgE<gt>.
+or send mail to E<lt>bug-Template-Plugin-PodSimple#rt.cpan.orgE<gt>.
 
 =head1 LICENSE
 
@@ -80,7 +80,7 @@ use Pod::Simple;
 use Carp 'croak';
 use base qw[ Template::Plugin ];
 use vars '$VERSION';
-$VERSION = sprintf "%d.%03d", q$Revision: 1.8 $ =~ /(\d+).(\d+)/g;
+$VERSION = sprintf "%d.%03d", q$Revision: 1.9 $ =~ /(\d+).(\d+)/g;
 
 
 my %map = (
