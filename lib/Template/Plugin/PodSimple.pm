@@ -51,6 +51,12 @@ Prefix is "B<?>" by default.
 L<Template::Plugin|Template::Plugin>,
 L<Pod::Simple|Pod::Simple>.
 
+=head1 BUGS
+
+To report bugs, go to
+E<lt>http://rt.cpan.org/NoAuth/Bugs.html?Dist=Template-Plugin-PodSimpleE<gt>
+or send mail to E<lt>Template-Plugin-PodSimple#rt.cpan.orgE<gt>.
+
 =head1 LICENSE
 
 Copyright (c) 2003 by D.H. (PodMaster). All rights reserved.
@@ -67,7 +73,7 @@ use Pod::Simple;
 use Carp 'croak';
 use base qw[ Template::Plugin ];
 use vars '$VERSION';
-$VERSION = sprintf "%d.%03d", q$Revision: 1.4 $ =~ /(\d+).(\d+)/g;
+$VERSION = sprintf "%d.%03d", q$Revision: 1.5 $ =~ /(\d+).(\d+)/g;
 
 
 my %map = (
